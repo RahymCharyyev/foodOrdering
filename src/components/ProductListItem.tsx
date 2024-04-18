@@ -1,14 +1,14 @@
 import Colors from '@/src/constants/Colors';
-import { StyleSheet, Text, Image, Pressable } from 'react-native';
-import { Product } from '../types';
-import { FC } from 'react';
 import { Link, useSegments } from 'expo-router';
+import { FC } from 'react';
+import { Image, Pressable, StyleSheet, Text } from 'react-native';
+import { Tables } from '../database.types';
 
 export const defaultPizzaImage =
   'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/food/default.png';
 
 type ProductListItemProps = {
-  product: Product;
+  product: Tables<'products'>;
 };
 
 export const ProductListItem: FC<ProductListItemProps> = ({ product }) => {
